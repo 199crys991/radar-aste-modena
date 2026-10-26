@@ -6,249 +6,140 @@
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}*,*::before,*::after{box-sizing:inherit}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Radar Aste Modena</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Le aste immobiliari tra Modena, Reggio Emilia e Bologna, già analizzate: prezzo, tetto d'offerta, rischi e punteggio di convenienza. Gratis ogni settimana.">
+<meta name="description" content="Le aste immobiliari di Modena, Reggio Emilia e Bologna, già analizzate. Ogni lunedì le tre migliori della settimana, gratis via email.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
 <style>
-/* Layout: colonna unica ariosa — titolo, scheda d'esempio reale come prova, tre passaggi, piani, iscrizione. Neutri caldi con accento mattone emiliano. */
+/* Layout: una sola colonna stretta, come una lettera o una newsletter. Niente riquadri decorativi: testo, una tabella vera, un modulo. */
 :root{
-  --bg:#f6f4f1; --surface:#ffffff; --line:#e8e3dd; --ink:#211c18; --muted:#6b625a;
-  --accent:#c4512b; --accent-soft:#fbeae2; --on-accent:#ffffff;
-  --good:#2e7a4d; --good-soft:#e2f2e8; --warn:#9a6400; --warn-soft:#f8eed5; --bad:#b33a2e; --bad-soft:#f8e0dc;
-  --font-display:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-data:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#ffffff; --ink:#1c1b19; --muted:#5f5b55; --line:#e4e1dc; --soft:#f6f4f0;
+  --accent:#a8442a; --on-accent:#ffffff; --ok:#2e6e47; --ok-soft:#e5f1e9; --err:#a8442a; --err-soft:#f8e4de;
+  --font-text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#171412; --surface:#211d1a; --line:#36302b; --ink:#f2ede7; --muted:#a99f96;
-  --accent:#ef8a62; --accent-soft:#3c241a; --on-accent:#1b0f0a;
-  --good:#6cc995; --good-soft:#18301f; --warn:#e3b04f; --warn-soft:#382c12; --bad:#ef7a6c; --bad-soft:#3d1d19; color-scheme:dark}}
+  --bg:#181715; --ink:#ece8e2; --muted:#a59f97; --line:#34312d; --soft:#22201d;
+  --accent:#e8876a; --on-accent:#1a0e09; --ok:#7cc79a; --ok-soft:#1a2e21; --err:#ef8f74; --err-soft:#3a201a; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#171412; --surface:#211d1a; --line:#36302b; --ink:#f2ede7; --muted:#a99f96;
-  --accent:#ef8a62; --accent-soft:#3c241a; --on-accent:#1b0f0a;
-  --good:#6cc995; --good-soft:#18301f; --warn:#e3b04f; --warn-soft:#382c12; --bad:#ef7a6c; --bad-soft:#3d1d19; color-scheme:dark}
+  --bg:#181715; --ink:#ece8e2; --muted:#a59f97; --line:#34312d; --soft:#22201d;
+  --accent:#e8876a; --on-accent:#1a0e09; --ok:#7cc79a; --ok-soft:#1a2e21; --err:#ef8f74; --err-soft:#3a201a; color-scheme:dark}
 
-body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55}
-.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:72px}
-h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0}
-h1{font-size:clamp(2.3rem,7vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-.025em}
-h2{font-size:1.5rem;font-weight:750;line-height:1.15}
-h3{font-size:1rem;font-weight:700}
-p{margin:0}
-.eyebrow{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:650}
-.num{font-family:var(--font-data);font-variant-numeric:tabular-nums}
-a{color:var(--accent)}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:19px;line-height:1.6}
+main{max-width:640px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+main > * + *{margin-top:1.1em}
+h1{font-size:2rem;line-height:1.2;font-weight:700;margin:.4em 0 0;text-wrap:balance}
+h2{font-size:1.25rem;line-height:1.3;font-weight:700;margin-top:2.2em;text-wrap:balance}
+p,ul{margin-bottom:0}
+ul{padding-left:1.2em} li + li{margin-top:.35em}
+a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.name{font-family:var(--font-ui);font-size:.85rem;font-weight:700;letter-spacing:.02em;color:var(--muted)}
+.small{font-size:.9rem;color:var(--muted)}
 
-/* testata */
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:800;font-size:1.05rem}
-.brand svg{flex:none}
-.hero{display:flex;flex-direction:column;gap:18px}
-.hero .lead{font-size:1.15rem;max-width:58ch;color:var(--ink)}
-.hero .lead em{font-style:normal;background:var(--accent-soft);color:var(--accent);padding:0 4px;border-radius:3px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{font:inherit;font-weight:700;font-size:1rem;border:0;border-radius:999px;padding:13px 22px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on-accent)}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.facts{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.88rem;color:var(--muted)}
-.facts b{font-family:var(--font-data);font-weight:500;color:var(--ink)}
+.tablewrap{overflow-x:auto;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child th,tr:last-child td{border-bottom:0}
+th{font-weight:400;color:var(--muted);width:46%}
+td{font-variant-numeric:tabular-nums lining-nums}
+td b{font-weight:700}
 
-/* scheda d'esempio */
-.sample{display:flex;flex-direction:column;gap:12px}
-.lot{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px rgba(60,40,25,.08);display:grid;grid-template-columns:76px minmax(0,1fr);overflow:hidden;position:relative}
-.score{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-family:var(--font-data);background:var(--good-soft);color:var(--good)}
-.score b{font-size:2.2rem;font-weight:500;line-height:1}
-.score small{font-size:.62rem;letter-spacing:.08em}
-.lot-body{padding:14px 16px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;justify-content:space-between}
-.addr{font-family:var(--font-display);font-weight:750;font-size:1.15rem;}
-.badges{display:flex;gap:6px;flex-wrap:wrap}
-.badge{font-size:.72rem;font-weight:650;padding:2px 8px;border-radius:999px;white-space:nowrap}
-.b-live{background:var(--good-soft);color:var(--good)} .b-drop{background:var(--accent-soft);color:var(--accent)} .b-risk{background:var(--bad-soft);color:var(--bad)}
-.kv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 14px}
-.kv div{display:flex;flex-direction:column;min-width:0}
-.kv span{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
-.kv b{font-family:var(--font-data);font-weight:500;font-size:.95rem;font-variant-numeric:tabular-nums}
-@media (max-width:560px){.kv{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.cap{background:var(--accent-soft);border-radius:12px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;font-size:.9rem}
-.cap b{font-family:var(--font-data);font-weight:500;font-size:1.1rem;color:var(--accent)}
-.lot-body ul{margin:0;padding-left:18px;font-size:.9rem;color:var(--muted);display:flex;flex-direction:column;gap:3px}
-.stamp{position:absolute;right:12px;bottom:10px;font-family:var(--font-data);font-size:.62rem;letter-spacing:.12em;color:var(--accent);border:1.5px solid var(--accent);border-radius:4px;padding:2px 6px;transform:rotate(-4deg);opacity:.7;pointer-events:none}
-.caption{font-size:.84rem;color:var(--muted);max-width:68ch}
-
-/* passaggi */
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-@media (max-width:700px){.steps{grid-template-columns:1fr}}
-.step{display:flex;flex-direction:column;gap:8px;background:var(--surface);border-radius:16px;padding:18px}
-.step .n{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
-.step p{font-size:.95rem;color:var(--muted)}
-.section{display:flex;flex-direction:column;gap:18px}
-
-/* piani */
-.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-@media (max-width:640px){.plans{grid-template-columns:1fr}}
-.plan{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
-.plan.soon{background:transparent;border-style:dashed}
-.plan .price{font-size:1.6rem;font-weight:800}
-.plan ul{margin:0;padding-left:18px;font-size:.93rem;display:flex;flex-direction:column;gap:4px}
-.who{display:flex;flex-wrap:wrap;gap:8px}
-.who span{font-size:.85rem;border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:var(--surface)}
-
-/* modulo */
-.signup{background:var(--accent-soft);color:var(--ink);border-radius:24px;padding:28px 22px;display:flex;flex-direction:column;gap:16px}
-.signup h2{color:var(--ink)}
-.signup .sub{color:var(--muted);font-size:.95rem}
-form{display:flex;flex-direction:column;gap:14px}
-.field{display:flex;flex-direction:column;gap:6px;min-width:0}
-.field label,.field legend{font-size:.82rem;font-weight:650;color:var(--muted)}
-fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-input[type=email],select{font:inherit;font-size:1rem;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;box-sizing:border-box}
-.row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px}
-@media (max-width:560px){.row{grid-template-columns:1fr}}
-.checks{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.95rem}
-.checks label{display:inline-flex;gap:6px;align-items:center;color:var(--ink);font-weight:400;font-size:.95rem}
-.consent{display:flex;gap:8px;align-items:flex-start;font-size:.85rem;color:var(--muted)}
-.consent a{color:var(--accent)}
+form{font-family:var(--font-ui);font-size:1rem;display:flex;flex-direction:column;gap:14px;margin-top:1.2em;padding:20px;background:var(--soft);border-radius:4px}
+label{display:block}
+.lbl{font-size:.88rem;font-weight:600;margin-bottom:4px;display:block}
+input[type=email],select{font:inherit;width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+fieldset{border:0;margin:0;padding:0}
+.checks{display:flex;flex-wrap:wrap;gap:6px 18px}
+.checks label{display:inline-flex;gap:6px;align-items:center}
+.consent{display:flex;gap:8px;align-items:flex-start;font-size:.88rem;color:var(--muted)}
 .consent input{margin-top:3px;flex:none}
-.signup .btn{background:var(--accent);color:var(--on-accent);align-self:flex-start}
-.msg{font-size:.92rem;padding:10px 12px;border-radius:8px}
-.msg.ok{background:var(--good-soft);color:var(--good)} .msg.err{background:var(--bad-soft);color:var(--bad)}
+button{font:inherit;font-weight:600;border:0;border-radius:4px;padding:11px 20px;background:var(--accent);color:var(--on-accent);cursor:pointer;align-self:flex-start}
+button:disabled{opacity:.6}
+.msg{font-size:.92rem;padding:10px 12px;border-radius:4px}
+.msg.ok{background:var(--ok-soft);color:var(--ok)} .msg.err{background:var(--err-soft);color:var(--err)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-
-footer{font-size:.8rem;color:var(--muted);display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:18px}
-@media (prefers-reduced-motion:no-preference){.btn{transition:transform .12s}.btn:hover{transform:translateY(-1px)}}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--line);font-family:var(--font-ui);font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+footer p{margin:0}
 </style>
 
 </head>
 <body>
-<div class="wrap">
-  <header class="hero">
-    <div class="brand">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12.5" fill="none" stroke="var(--accent)" stroke-width="1.5"/><circle cx="14" cy="14" r="7.5" fill="none" stroke="var(--ink)" stroke-width="1" opacity=".5"/><path d="M14 14 L23 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/><circle cx="19.5" cy="17.5" r="2.2" fill="var(--accent)"/></svg>
-      Radar Aste Modena
-    </div>
-    <span class="eyebrow">Aste giudiziarie · Modena, Reggio Emilia, Bologna</span>
-    <h1>Le aste immobiliari della zona, con i conti già fatti.</h1>
-    <p class="lead">Ogni giorno controlliamo le vendite giudiziarie nel raggio di 50 km da Maranello. Ogni lunedì ricevi via email le <em>3 occasioni migliori</em>, con offerta minima, tetto d'offerta oltre il quale l'affare non regge, rischi e punteggio di convenienza da 1 a 10.</p>
-    <div class="cta-row">
-      <a class="btn" href="#iscriviti">Iscriviti gratis</a>
-      <a class="btn ghost" href="#esempio">Guarda un esempio</a>
-    </div>
-    <div class="facts">
-      <span><b>200+</b> immobili seguiti</span>
-      <span><b>50 km</b> di raggio</span>
-      <span><b>ogni giorno</b> controllo delle fonti</span>
-    </div>
-  </header>
+<main>
+  <p class="name">RADAR ASTE MODENA</p>
+  <h1>Le aste immobiliari di Modena, Reggio e Bologna, già analizzate.</h1>
 
-  <section class="sample section" id="esempio" aria-labelledby="es-title">
-    <span class="eyebrow">Esempio reale dal report del 26 ottobre 2026</span>
-    <h2 id="es-title">Una scheda come quelle che ricevi</h2>
-    <article class="lot" aria-label="Scheda d'esempio: Castelvetro di Modena, Via Garibaldi 26">
-      <div class="score"><b>9</b><small>/10</small></div>
-      <div class="lot-body">
-        <div class="top">
-          <span class="addr">Castelvetro di Modena · Via Garibaldi 26</span>
-          <span class="badges"><span class="badge b-live">asta 17/12</span><span class="badge b-drop">ribasso −25%</span></span>
-        </div>
-        <p style="font-size:.92rem;color:var(--muted)">Appartamento al 1° piano con soffitta, 197 m², costruito nel 1977. Asta telematica asincrona.</p>
-        <div class="kv">
-          <div><span>Prezzo base</span><b>93.750 €</b></div>
-          <div><span>Offerta minima</span><b>70.312 €</b></div>
-          <div><span>Ingresso al m²</span><b>476 €</b></div>
-          <div><span>Media zona m²</span><b>1.702 €</b></div>
-        </div>
-        <div class="cap">
-          <span>Tetto d'offerta <b>115.500 €</b></span>
-          <span>spazio di rilancio <b>45.187 €</b></span>
-          <span>ROI stimato <b>34%</b></span>
-        </div>
-        <ul>
-          <li>Occupato senza titolo: la liberazione è a carico del custode, mettere in conto mesi di attesa.</li>
-          <li>Classe energetica G o F a seconda della fonte: da verificare in perizia.</li>
-          <li>Se messo a reddito: affitto stimato 1.730 €/mese, rientro in circa 17 anni.</li>
-        </ul>
-      </div>
-          </article>
-    <p class="caption">Il tetto d'offerta è il prezzo di aggiudicazione più alto che lascia ancora un ROI del 20% dopo imposte, lavori e costi di rivendita. È una prima scrematura: prima di offrire vanno sempre lette perizia e avviso di vendita.</p>
-  </section>
+  <p>Ogni giorno leggiamo tutte le vendite giudiziarie entro 50 km da Maranello: nuovi avvisi, ribassi, rinvii ed esiti. Su ogni immobile facciamo i conti, cioè quanto vale davvero nella sua zona, quanto costa sistemarlo, fino a che prezzo conviene offrire e cosa può andare storto.</p>
 
-  <section class="section" aria-labelledby="come-title">
-    <span class="eyebrow">Come funziona</span>
-    <h2 id="come-title">Dalle fonti pubbliche alla tua casella</h2>
-    <div class="steps">
-      <div class="step"><span class="n">1 · raccolta</span><h3>Leggiamo le aste ogni giorno</h3><p>Portale delle Vendite Pubbliche, siti dei tribunali e portali d'asta: nuovi lotti, ribassi, rinvii ed esiti.</p></div>
-      <div class="step"><span class="n">2 · analisi</span><h3>Facciamo i conti su ogni lotto</h3><p>Confronto con i prezzi medi del comune, stima di lavori, imposte e affitto, controllo di occupazione, quote e difformità.</p></div>
-      <div class="step"><span class="n">3 · invio</span><h3>Ti mandiamo solo quelle buone</h3><p>Ogni lunedì le 3 schede con il punteggio più alto. Niente lotti in quota, terreni agricoli o capannoni.</p></div>
-    </div>
-  </section>
+  <p>Noi ci occupiamo dell'analisi. Voi dovete solo scegliere l'affare che fa per voi.</p>
 
-  <section class="section" aria-labelledby="piani-title">
-    <span class="eyebrow">Cosa ricevi</span>
-    <h2 id="piani-title">Gratis adesso, completo presto</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Settimanale</h3>
-        <span class="price">0 €</span>
-        <ul>
-          <li>Le 3 aste migliori ogni lunedì</li>
-          <li>Scheda con punteggio, tetto d'offerta e rischi</li>
-          <li>Ti cancelli con un clic</li>
-        </ul>
-      </div>
-      <div class="plan soon">
-        <h3>Completo <span class="badge b-drop">in arrivo</span></h3>
-        <span class="price" style="color:var(--muted)">in arrivo</span>
-        <ul>
-          <li>Tutte le aste attive nel raggio, ogni giorno</li>
-          <li>Avviso immediato su nuovi lotti e ribassi nella tua zona</li>
-          <li>Storico di prezzi ed esiti</li>
-        </ul>
-        <p style="font-size:.85rem;color:var(--muted)">Gli iscritti al settimanale lo provano per primi.</p>
-      </div>
-    </div>
-    <div class="who" aria-label="Per chi è">
-      <span>Investitori privati</span><span>Chi ristruttura e rivende</span><span>Agenzie immobiliari</span><span>Imprese edili</span><span>Chi cerca casa all'asta</span>
-    </div>
-  </section>
+  <p>Ogni lunedì mandiamo gratis via email le tre aste migliori della settimana. <a href="#iscriviti">Iscriviti qui sotto</a>.</p>
 
-  <section class="signup" id="iscriviti" aria-labelledby="iscr-title">
-    <h2 id="iscr-title">Ricevi il prossimo report lunedì</h2>
-    <p class="sub">Una email a settimana. Nessuno spam, nessuna cessione dei dati.</p>
-    <form id="form" novalidate>
-      <div class="row">
-        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@esempio.it" required></div>
-        <div class="field"><label for="ruolo">Mi interessa come</label>
-          <select id="ruolo" name="ruolo">
-            <option value="investitore">Investitore privato</option>
-            <option value="casa">Cerco casa per me</option>
-            <option value="agenzia">Agenzia immobiliare</option>
-            <option value="impresa">Impresa edile</option>
-            <option value="altro">Altro</option>
-          </select></div>
+  <h2>Un esempio dal report del 26 ottobre</h2>
+  <p>Appartamento al primo piano con soffitta a Castelvetro di Modena, Via Garibaldi 26: 197 m², costruito nel 1977. L'asta precedente è andata deserta e il prezzo è sceso del 25%.</p>
+  <div class="tablewrap">
+    <table>
+      <tbody>
+        <tr><th>Prezzo base</th><td>93.750 €</td></tr>
+        <tr><th>Offerta minima</th><td>70.312 €</td></tr>
+        <tr><th>Data asta</th><td>17 dicembre 2026, telematica</td></tr>
+        <tr><th>Prezzo d'ingresso al m²</th><td>476 € (media del comune 1.702 €)</td></tr>
+        <tr><th>Offerta massima consigliata</th><td><b>115.500 €</b></td></tr>
+        <tr><th>Rendimento stimato se rivenduto</th><td>34%</td></tr>
+        <tr><th>Se affittato</th><td>circa 1.730 € al mese</td></tr>
+        <tr><th>Punteggio di convenienza</th><td><b>9 su 10</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Cosa controllare prima di offrire: l'appartamento è occupato senza titolo e la liberazione spetta al custode, quindi bisogna mettere in conto qualche mese di attesa. Inoltre la classe energetica è G o F a seconda della fonte, e va verificata in perizia.</p>
+  <p class="small">L'offerta massima consigliata è il prezzo più alto a cui l'operazione rende ancora almeno il 20%, dopo imposte, lavori e costi di vendita.</p>
+
+  <h2>Cosa trovate in ogni scheda</h2>
+  <ul>
+    <li>Prezzo base, offerta minima, data e modalità dell'asta.</li>
+    <li>Il confronto con i prezzi reali della zona.</li>
+    <li>Una stima di lavori, imposte e affitto ottenibile.</li>
+    <li>I problemi da verificare: occupazione, quote, difformità, stato dell'immobile.</li>
+    <li>Un punteggio da 1 a 10, per capire subito se vale la pena approfondire.</li>
+  </ul>
+  <p>Lasciamo fuori lotti in quota, terreni agricoli e capannoni.</p>
+
+  <h2>Quello che non facciamo</h2>
+  <p>Non partecipiamo alle aste per conto vostro e non diamo consulenza legale o finanziaria. Le schede sono una prima scrematura fatta su fonti pubbliche: prima di offrire vanno sempre lette perizia e avviso di vendita, e se serve vi conviene sentire un professionista.</p>
+
+  <h2 id="iscriviti">Ricevi il report del lunedì</h2>
+  <p>Una email a settimana, gratis. Ci si cancella con un clic.</p>
+  <form id="form" novalidate>
+    <label for="email"><span class="lbl">Email</span><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@esempio.it" required></label>
+    <label for="ruolo"><span class="lbl">Vi interessa come</span>
+      <select id="ruolo" name="ruolo">
+        <option value="investitore">Investitore privato</option>
+        <option value="casa">Cerco casa per me</option>
+        <option value="agenzia">Agenzia immobiliare</option>
+        <option value="impresa">Impresa edile</option>
+        <option value="altro">Altro</option>
+      </select></label>
+    <fieldset>
+      <legend class="lbl">Zone</legend>
+      <div class="checks">
+        <label><input type="checkbox" id="z-mo" name="zona" value="MO" checked> Modena</label>
+        <label><input type="checkbox" id="z-re" name="zona" value="RE"> Reggio Emilia</label>
+        <label><input type="checkbox" id="z-bo" name="zona" value="BO"> Bologna</label>
       </div>
-      <fieldset>
-        <legend>Zone</legend>
-        <div class="checks">
-          <label><input type="checkbox" id="z-mo" name="zona" value="MO" checked> Modena</label>
-          <label><input type="checkbox" id="z-re" name="zona" value="RE"> Reggio Emilia</label>
-          <label><input type="checkbox" id="z-bo" name="zona" value="BO"> Bologna</label>
-        </div>
-      </fieldset>
-      <div class="hp" aria-hidden="true"><label for="sito">Sito</label><input id="sito" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-      <label class="consent"><input type="checkbox" id="privacy" name="privacy" required> <span>Ho letto l'<a href="privacy.html">informativa privacy</a> e acconsento a ricevere il report settimanale via email.</span></label>
-      <button class="btn" type="submit" id="send">Iscrivimi</button>
-      <div id="msg" class="msg" hidden role="status"></div>
-    </form>
-  </section>
+    </fieldset>
+    <div class="hp" aria-hidden="true"><label for="sito">Sito</label><input id="sito" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+    <label class="consent" for="privacy"><input type="checkbox" id="privacy" name="privacy" required> <span>Ho letto l'<a href="privacy.html">informativa privacy</a> e voglio ricevere il report settimanale via email.</span></label>
+    <button type="submit" id="send">Iscrivimi</button>
+    <div id="msg" class="msg" hidden role="status"></div>
+  </form>
 
   <footer>
-    <p>I dati provengono da fonti pubbliche (Portale delle Vendite Pubbliche, portali d'asta e annunci) e possono contenere errori. Le schede sono una prima analisi e non costituiscono consulenza finanziaria, legale o tecnica: prima di fare un'offerta leggere sempre perizia, avviso di vendita e ordinanza, e se serve rivolgersi a un professionista.</p>
+    <p>Dati tratti da fonti pubbliche (Portale delle Vendite Pubbliche, portali d'asta, annunci). Possono contenere errori o non essere aggiornati.</p>
     <p><a href="privacy.html">Informativa privacy</a></p>
   </footer>
-</div>
+</main>
 
 <script>
-// Indirizzo del servizio che riceve le iscrizioni (es. Formspree). Vuoto = modalità anteprima.
+// Indirizzo del servizio che riceve le iscrizioni. Vuoto = modalità anteprima.
 const FORM_ENDPOINT = "";
 const form = document.getElementById("form"), msg = document.getElementById("msg"), btn = document.getElementById("send");
 function show(text, ok){ msg.textContent = text; msg.className = "msg " + (ok ? "ok" : "err"); msg.hidden = false; }
@@ -256,9 +147,9 @@ form.addEventListener("submit", async e => {
   e.preventDefault();
   const email = document.getElementById("email").value.trim();
   const zone = [...form.querySelectorAll('input[name=zona]:checked')].map(i => i.value);
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return show("Controlla l'indirizzo email: sembra incompleto.", false);
-  if (!zone.length) return show("Scegli almeno una zona.", false);
-  if (!document.getElementById("privacy").checked) return show("Per iscriverti serve il consenso all'informativa privacy.", false);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return show("Controllate l'indirizzo email: sembra incompleto.", false);
+  if (!zone.length) return show("Scegliete almeno una zona.", false);
+  if (!document.getElementById("privacy").checked) return show("Per iscrivervi serve il consenso all'informativa privacy.", false);
   if (document.getElementById("sito").value) return;
   if (!FORM_ENDPOINT) { show("Anteprima: l'iscrizione funzionerà quando il modulo sarà collegato.", true); return; }
   btn.disabled = true;
@@ -267,8 +158,8 @@ form.addEventListener("submit", async e => {
       body: JSON.stringify({ email, ruolo: document.getElementById("ruolo").value, zone: zone.join(","), privacy: "si" }) });
     if (!r.ok) throw new Error();
     form.reset(); document.getElementById("z-mo").checked = true;
-    show("Fatto. Il primo report arriva lunedì: se non lo trovi, controlla la cartella spam.", true);
-  } catch { show("L'iscrizione non è andata a buon fine. Riprova tra qualche minuto.", false); }
+    show("Fatto. Il primo report arriva lunedì: se non lo trovate, guardate nello spam.", true);
+  } catch { show("L'iscrizione non è andata a buon fine. Riprovate tra qualche minuto.", false); }
   finally { btn.disabled = false; }
 });
 </script>
